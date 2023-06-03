@@ -1,0 +1,36 @@
+.btnPedido {
+    background-color: #76A5BF;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 5px 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btnPedido:hover {
+    background-color: #96C8E4;
+    color: #000;
+}
+
+.input-control {
+    margin: 5px 5px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.input-control-ID {
+    margin: 5px 5px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    text-align: center;
+}

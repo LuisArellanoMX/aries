@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+:root{
+	--green: hsl(162, 45%, 56%);
+	--lead: hsl(162, 2%, 56%);
+	--blue: hsl(220, 85%, 57%);
+	--violet: hsl(272, 92%, 32%);
+	--tex-white: hsl(0, 0%, 100%);
+	--text-light-gray: hsl(0, 0%, 90%);
+	--body-bg-color: hsl(200, 54%, 12%);
+	--glass-bg-color: hsla(0, 0%, 100%, 0.05);
+	--border-color: hsla(0, 0%, 100%, 0.25);
+	--blur: blur(10px);
+	--button-hover-color: hsla(0, 0%, 0%, 0.3);
+}
+
+body{
+	background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(148, 175, 218)), url(../../assets/img/vidrioFondo4.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.padre{
+	display: flex;
+	flex-flow: column nowrap;
+}
+	.header{
+		margin-top: 10px;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+		.header .menu{
+			display: flex;
+			align-items: center;
+			height: 150px;
+			flex-flow: row nowrap;
+		}
+		.header .menu .espacio{
+			flex: 1 1 auto;
+		}
+		.header .menu .logo{
+			flex: 5 1 auto;
+			text-align: center;
+		}
+			.header .menu .logo img{
+				object-fit: cover;
+				width: 15%;
+			}
+
+
+	.section{
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+		.section .form-conte{
+			background: rgba(0, 0, 0, 0.6);
+			flex: 2 1 auto;
+			display: flex;
+			flex-flow: row wrap;
+			width: 100%;
+			max-width: 500px;
+			position: relative;
+			z.z-index: 1;
+			border-radius: 25px;
+		}
+			.section .form-conte .caja{
+				color: #FFF;
+				flex: 1 1 40%;
+				border-color: var(--glass-bg-color);
+				border: 1px solid var(--border-color);
+				padding: 40px 50px;
+				border-radius: 20px;
+				backdrop-filter: var(--blur);
+			}
+				.section .form-conte .caja h1{
+					font-size: 28px;
+					text-align: center;
+					line-height: 1.2;
+					color: var(--tex-white);
+					font-weight: 500;
+					margin: 10px;
+				}
+				.section .form-conte .caja form{
+					margin: 25px 0px 20px;
+				}
+				.section .form-conte input{
+					margin: 10px;
+				}
+
+				.section .form-conte .caja .titulo{
+					display: flex;
+					flex-flow: row wrap;
+				}
+					.section .form-conte .caja .titulo h1{
+						padding-left: 140px;
+					}
+					.section .form-conte .caja .titulo i{
+						padding: 150;
+						margin-top: 20px;
+						max-width: 100%;
+					}
+
+				.section .form-conte .caja .art-conte{
+					display: flex;
+					flex-flow: row wrap;
+					position: relative;
+				}
+					.section .form-conte .caja .art-conte i{
+						margin: 20px;
+						position: absolute;
+					}
+
+					.section .form-conte .caja .art-conte .input-control{
+						display: block;
+						padding-left: 50px;
+						height: 45px;
+						width: 100%;
+						background-color: transparent;
+						border: none;
+						border-bottom: 1px solid var(--border-color);
+						color: inherit;
+						font-weight: inherit;
+						font-size: 16px;
+					}
+						.section .form-conte .caja .art-conte .input-control:focus{
+							outline: none;
+						}
+
+				.section .form-conte .caja .btn{
+					height: 45px;
+					width: 100%;
+					font-size: 16px;
+					font-weight: 500px;
+					font-family: ;
+					cursor: pointer;
+					-webkit-user-select: none;
+	    			-moz-user-select: none;
+					border: 1px solid transparent;
+					border-radius: 20px;
+					user-select: none;
+					background-color: transparent;
+					color: var(--tex-white);
+					position: relative;
+					z-index: 1;
+					overflow: hidden;
+					margin: 10px;
+					box-shadow: 0px 10px 10px -10px black;
+				}
+					.section .form-conte .caja .btn::before{
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+						transition: background-color 0.5s ease;
+						z-index: -1;
+					}
+						.section .form-conte .caja .btn:hover::before{
+							background-color: var(--button-hover-color);
+						}
+
+	.pie{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+		.pie .pie-box{
+			flex: 2 1;
+			display: flex;
+			flex-flow: row wrap;
+			width: 100%;
+			max-width: 200px;
+			position: relative;
+			z.z-index: 1;
+		}
+			.pie .pie-box .art-caja{
+				color: #FFF;
+				flex: 1 1 40%;
+				padding: 10px 10px;
+			}
+				.pie .pie-box .art-caja p{
+					text-align: center;
+					align-items: center;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+				}
+@media (max-width: 900px){
+	.header .menu .logo img{
+		width: 30%;
+	}
+}
+
+@media (max-width: 700px){
+	.header .menu .logo{
+		align-items: center;
+	}
+		.header .menu .logo img{
+			width: 30%;
+		}
+}
+
+@media (max-width: 600px){
+	.header .menu .logo img{
+		width: 40%;
+	}
+}
